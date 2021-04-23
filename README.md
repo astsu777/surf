@@ -1,7 +1,7 @@
 # My build of Surf v2.0
 ![](https://hostr.co/file/2AOJ3pHvqWB7/screenshot_20210423-017.png)
 
-This repository hosts the source code of my build of Surf made by [Suckless software](https://surf.suckless.org/). It is based on Surf v2.0 and is mostly unpatched. A single patch has been applied for now so Surf uses the clipboard properly. The list of applied patches can be found in the *patches* folder. It features:
+This repository hosts the source code of my build of Surf made by [Suckless software](https://surf.suckless.org/). It is based on Surf v2.0 and is mostly unpatched with the exception of two patches: one to have built-in download support and the second one for Surf to use the system clipboard. The list of applied patches can be found in the *patches* folder. It features:
 
 * Ultra minimalist Web browser/display: no tabs, no statusbar, no plugins, no support for videos built-in (will use *mpv* to do so)
 * Caching has been totally disabled
