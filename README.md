@@ -3,16 +3,21 @@
 
 This repository hosts the source code of my build of Surf made by [Suckless software](https://surf.suckless.org/). It is based on Surf v2.0 and is mostly unpatched with the exception of two patches: one to have built-in download support and the second one for Surf to use the system clipboard. The list of applied patches can be found in the *patches* folder. It features:
 
-* Ultra minimalist Web browser/display: no tabs, no statusbar, no plugins, no support for videos built-in (will use *mpv* to do so)
+* Ultra minimalist Web browser/display: no tabs, no statusbar, no plugins
+* Search queries using *surfraw* (*dmenu* and *surfraw* must be installed for this work)
+* Support for videos built-in if the following packages are installed: *gst-libav* & *gst-plugins-good*
+* Links hinting (the file *script.js* must be placed in the folder *$HOME/.config/surf/script.js*
 * Caching has been totally disabled
 * Other disabled features: automatic media play, geolocation, spell checking, scroll bars, DNS prefetch
 * User-Agent has been set to mimic mainstream Web browser
+* Site specific custom style sheets (requires configuration in *config.def.h* and a CSS file in *$HOME/.config/surf/styles*)
 * Support for the *XDG_BASE_DIRECTORY* standard: files for scripting or stylesheets will be located at *$XDG_CONFIG_HOME/surf*
 
 # Dependencies
 The following packages are necessary in order to run this build of Surf properly:
 
-* dmenu (for text search and URI browsing)
+* dmenu (for text search, Web queries and URI browsing)
+* surfraw (for quick Web queries)
 
 If you want a nice DMenu to be integrated, you can install [my custom build](https://github.com/GSquad934/dmenu). You can also check out [my build of ST](https://github.com/GSquad934/st) for a nice terminal emulator.
 
@@ -50,6 +55,10 @@ I configured the key bindings that I like. They are all configured in the *confi
 | `MODKEY + o` | open provided URL in current window |
 | `MODKEY + /` | search text on the page |
 | `MODKEY + n` | go to the next search match (downwards) |
+| `MODKEY + s` | search query using *surfraw* |
+| `MODKEY + f` | enable link hinting and open link in current window |
+| `MODKEY + SHIFT + f` | enable link hinting and open link in a new window |
+| `MODKEY + c` | cancel link hinting |
 | `MODKEY + SHIFT + n` | go to the previous search match (upwards) |
 | `Escape (or MODKEY + c` | stop loading the Web page |
 | `MODKEY + r` | reload the page |

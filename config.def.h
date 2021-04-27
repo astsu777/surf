@@ -52,7 +52,7 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
         .v = (const char *[]){ "/bin/sh", "-c", \
              "prop=\"`xprop -id $2 $0 " \
              "| sed \"s/^$0(STRING) = \\(\\\\\"\\?\\)\\(.*\\)\\1$/\\2/\" " \
-             "| xargs -0 printf %b | dmenu`\" &&" \
+             "| xargs -0 printf %b | dmenu -i -p \"Type URL\"`\" &&" \
              "xprop -id $2 -f $1 8s -set $1 \"$prop\"", \
              p, q, winid, NULL \
         } \
@@ -83,6 +83,12 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
         } \
 }
 
+/* Search with Surfraw */
+#define SR_SEARCH { .v = (char *[]){ "/bin/sh", "-c", \
+	"xprop -id $0 -f _SURF_GO 8s -set _SURF_GO \
+	$(sr -p $(sr -elvi | tail -n +2 | cut -s -f1 | dmenu -i -p \"Web Search\"))", \
+	winid, NULL } }
+
 /* styles */
 /*
  * The iteration will stop at the first match, beginning at the beginning of
@@ -90,7 +96,8 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
  */
 static SiteStyle styles[] = {
 	/* regexp               file in $styledir */
-	{ ".*",                 "default.css" },
+	{ ".*suckless.org.*",       "suckless.org.css" },
+	{ ".*",                     "default.css" },
 };
 
 #define MODKEY GDK_CONTROL_MASK
@@ -150,6 +157,7 @@ static Key keys[] = {
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_b,      toggle,     { .i = ScrollBars } },
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_m,      toggle,     { .i = Style } },
 
+	{ MODKEY,                GDK_KEY_s,      spawn,      SR_SEARCH },
 	/* download-console */
 	/* Disabled keybinding because it does not work well */
 	/* { MODKEY,                GDK_KEY_d,      spawndls,   { 0 } }, */
