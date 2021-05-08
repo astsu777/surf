@@ -86,7 +86,7 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
 /* Search with Surfraw */
 #define SR_SEARCH { .v = (char *[]){ "/bin/sh", "-c", \
 	"xprop -id $0 -f _SURF_GO 8s -set _SURF_GO \
-	$(sr -p $(sr -elvi | tail -n +2 | cut -s -f1 | dmenu -i -p \"Web Search\"))", \
+	$(dmenu-websearch || sr -p $(sr -elvi | tail -n +2 | cut -s -f1 | dmenu -i -l 30 -p \"Web Search\"))", \
 	winid, NULL } }
 
 /* styles */
