@@ -1,5 +1,5 @@
 # My build of Surf v2.1
-![](https://hostr.co/file/2AOJ3pHvqWB7/screenshot_20210423-017.png)
+![](https://i.postimg.cc/8PCDNyVn/screenshot-20210423-017.png)
 
 This repository hosts the source code of my build of Surf made by [Suckless software](https://surf.suckless.org/). It is based on Surf v2.1 and is mostly unpatched with the exception of two patches: one to have built-in download support and the second one for Surf to use the system clipboard. The list of applied patches can be found in the *patches* folder. It features:
 
