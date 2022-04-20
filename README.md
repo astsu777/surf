@@ -12,6 +12,7 @@ This repository hosts the source code of my build of Surf made by [Suckless soft
 * User-Agent has been set to mimic mainstream Web browser
 * Site specific custom style sheets (requires configuration in *config.def.h* and a CSS file in *$HOME/.config/surf/styles*)
 * Support for the *XDG_BASE_DIRECTORY* standard: files for scripting or stylesheets will be located at *$XDG_CONFIG_HOME/surf*
+* Support for dark mode if the Website has a dark mode configured
 
 # Dependencies
 The following packages are necessary in order to run this build of Surf properly:
@@ -87,6 +88,7 @@ I configured the key bindings that I like. They are all configured in the *confi
 | `MODKEY + SHIFT + v` | toggles plugins |
 | `MODKEY + SHIFT + b` | toggles scroll bars |
 | `MODKEY + SHIFT + m` | toggles custom stylesheets |
+| `MODKEY + SHIFT + d` | toggles dark mode support |
 
 # Contact
 You can always reach out to me:
