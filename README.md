@@ -20,18 +20,18 @@ The following packages are necessary in order to run this build of Surf properly
 * dmenu (for text search, Web queries and URI browsing)
 * surfraw (for quick Web queries)
 
-If you want a nice DMenu to be integrated, you can install [my custom build](https://github.com/GSquad934/dmenu). You can also check out [my build of ST](https://github.com/GSquad934/st) for a nice terminal emulator.
+If you want a nice DMenu to be integrated, you can install [my custom build](https://github.com/astsu777/dmenu). You can also check out [my build of ST](https://github.com/astsu777/st) for a nice terminal emulator.
 
 # Installation
 Download this repository, compile the sources and install the binaries. Type the following commands to do so:
 
 ```
-git clone --depth 1 https://github.com/GSquad934/surf.git
+git clone --depth 1 https://github.com/astsu777/surf.git
 cd surf
 sudo make clean install
 ```
 
-<u>**Note**</u>: this Surf installation is automated when installing an X environment with my [bootstrap script](https://github.com/GSquad934/bootstrap).
+<u>**Note**</u>: this Surf installation is automated when installing an X environment with my [bootstrap script](https://github.com/astsu777/bootstrap).
 
 # Usage
 The Surf Web browser is not really meant to browse the modern Web properly: it lacks so many features that any multimedia Web sites would break. However, this program is very light on system resources and is well suited to read text/documentation for example.
@@ -93,5 +93,5 @@ I configured the key bindings that I like. They are all configured in the *confi
 # Contact
 You can always reach out to me:
 
-* [Twitter](https://twitter.com/gaetanict)
+* [Twitter](https://twitter.com/astsu777)
 * [Email](mailto:gaetan@ictpourtous.com)
