@@ -17,6 +17,7 @@ This repository hosts the source code of my build of Surf made by [Suckless soft
 # Dependencies
 The following packages are necessary in order to run this build of Surf properly:
 
+* webkit2gtk (v4.0 or greater - necessary for compiling)
 * dmenu (for text search, Web queries and URI browsing)
 * surfraw (for quick Web queries)
 
